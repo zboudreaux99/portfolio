@@ -1,0 +1,108 @@
+@import "../../global.scss";
+
+.About {
+    display: flex;
+    color: $mainColor;
+
+    .left {
+        flex: 0.5;
+        overflow: hidden;
+
+        .aboutContainer {
+            position: relative;
+            width: 700px;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h3 {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 25px;
+            }
+
+            p{
+                font-size: 20px;
+                width: 500px;
+
+                a {
+                    color: $mainColor;
+
+                    &:hover {
+                        color: white;
+                        transition: 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+        
+        h3 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+        }
+
+        ul {
+            margin: 10px;
+            margin-bottom: 35px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            li {
+                text-align: center;
+                width: 150px;
+            }
+        }
+
+        .skills-fill-container {
+            position: relative;
+            margin-right: 1vw;
+            margin-bottom: 1.5vh;
+            padding: 2vh 5vw;
+            border: 2px solid grey;
+
+            .skills-fill {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100.25%;
+                margin: -0.25px 0 0 -0.25px;
+
+                p {
+                    align-self: center;
+                    margin-left: 5px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+
+            .skills-fill-advanced {
+                width: 75%;
+                background-color: #399e61;
+            }
+                
+            .skills-fill-intermediate {
+                width: 50%;
+                background-color: #f8c951;
+            }
+
+            .skills-fill-novice {
+                width: 25%;
+                background-color: #fa4059;
+            }
+        }
+    }
+}
