@@ -6,6 +6,10 @@ li {
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    
+    @include mobile {
+        margin-right: 10px;
+    }
 
     &.active {
         color: black;

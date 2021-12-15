@@ -4,9 +4,17 @@
     display: flex;
     color: $mainColor;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     .left {
         flex: 0.5;
         overflow: hidden;
+
+        @include mobile {
+            flex: 0.4;
+        }
 
         .links-container {
             height: 90vh;
@@ -16,12 +24,24 @@
             justify-content: center;
             flex-direction: column;
 
+            @include mobile {
+                height: 100%;
+            }
+
             div {
                 display: flex;
                 margin: 2vh 0;
 
+                @include mobile {
+                    margin: 1.5vh 0;
+                }
+
                 .icon {
                     font-size: 40px;
+
+                    @include mobile {
+                        font-size: 25px;
+                    }
                 }
 
                 .git {
@@ -52,6 +72,10 @@
                     color: $mainColor;
                     transition: all 0.5s ease;
 
+                    @include mobile {
+                        font-size: 16px;
+                    }
+
                     &:hover {
                         color: white;
                     }
@@ -67,11 +91,24 @@
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+            flex: 0.6;
+        }
+
         .form-container {
+            @include mobile {
+                height: 100%;
+            }
+
             h2 {
                 font-size: 32px;
                 text-align: center;
                 margin-bottom: 20px;
+
+                @include mobile {
+                    margin-bottom: 5px;
+                    font-size: 25px;
+                }
             }
 
             form {
@@ -83,11 +120,21 @@
                 input {
                     width: 300px;
                     height: 30px;
+
+                    @include mobile {
+                        width: 200px;
+                        height: 15px; 
+                    }
                 }
 
                 textarea {
                     width: 300px;
                     height: 200px;
+
+                    @include mobile {
+                        width: 200px;
+                        height: 75px; 
+                    }
                 }
 
                 .form-submit {
@@ -126,6 +173,11 @@
                     margin: 10px;
                     padding: 20px;
 
+                    @include mobile {
+                        font-size: 15px;
+                        padding: 5px;
+                    }
+
                     .message-button {
                         background: transparent;
                         border: none;
@@ -141,43 +193,5 @@
                 }
             }
         }
-
-    //     h2 {
-    //         font-size: 30px;
-    //     }
-
-    //     form {
-    //         width: 70%;
-    //         height: 70%;
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: center;
-    //         justify-content: space-around;
-
-    //         input {
-    //             width: 300px;
-    //             height: 30px;
-    //             font-size: 14px;
-    //             border-radius: 5px;
-    //         }
-
-    //         textarea {
-    //             width: 300px;
-    //             height: 200px;
-    //             font-size: 14px;
-    //             border-radius: 5px;
-    //         }
-
-    //         button {
-    //             width: 150px;
-    //             height: 30px;
-    //             color: black;
-    //             background-color: $mainColor;
-    //             border: none;
-    //             border-radius: 10px;
-    //             font-weight: 500;
-    //             cursor: pointer;
-    //         }
-    //     }
     }
 }
