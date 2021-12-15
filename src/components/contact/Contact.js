@@ -31,12 +31,12 @@ const Contact = () => {
         setFormData(INITIAL_STATE);
         setMessage(true);
 
-        // emailjs.sendForm("service_dyx22x1", "template_x5tytj9", e.target, "user_DyhQ8407M4T7Pu4WYzO4w").then(res => {
-        //         console.log('SUCCESS!', res.status, res.text);
-        //     }, e => {
-        //         console.log("FAILED", e);
-        //     }
-        // );
+        emailjs.sendForm("service_dyx22x1", "template_x5tytj9", e.target, "user_DyhQ8407M4T7Pu4WYzO4w").then(res => {
+                console.log('SUCCESS!', res.status, res.text);
+            }, e => {
+                console.log("FAILED", e);
+            }
+        );
     }
 
     return (

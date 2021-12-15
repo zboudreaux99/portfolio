@@ -101,7 +101,7 @@
             margin-right: 1vw;
             margin-bottom: 1.5vh;
             padding: 2vh 5vw;
-            border: 2px solid grey;
+            border: 2px solid rgba($mainColor, 0.5);
 
             .skills-fill {
                 display: flex;
@@ -111,29 +111,30 @@
                 left: 0;
                 height: 100.25%;
                 margin: -0.25px 0 0 -0.25px;
+                background-color: rgba(125, 125, 125, 1);
 
                 p {
                     align-self: center;
                     margin-left: 5px;
                     font-size: 1.5rem;
                     font-weight: bold;
-                    color: black;
+                    color: rgba($mainColor, 1);
                 }
             }
 
             .skills-fill-advanced {
-                width: 75%;
-                background-color: #399e61;
+                width: 55%;
+                // background-color: #399e61;
             }
                 
             .skills-fill-intermediate {
-                width: 50%;
-                background-color: #f8c951;
+                width: 40%;
+                // background-color: #f8c951;
             }
 
             .skills-fill-novice {
-                width: 25%;
-                background-color: #fa4059;
+                width: 15%;
+                // background-color: #fa4059;
             }
         }
     }
