@@ -50,18 +50,18 @@ const Contact = () => {
 
                     <div>
                         <LinkedIn className="icon linkedin" />
-                        <a href="linkedin.com/in/zach-boudreaux/" target="_blank"> zach-boudreaux </a>
+                        <a href="https://linkedin.com/in/zach-boudreaux/" target="_blank"> zach-boudreaux </a>
                     </div>
 
                     <div>
                         <At className="icon at" />
-                        <a href="mailto:zach.boudreaux999@gmail.com" target="_blank"> zach.boudreaux999@gmail.com </a>
+                        <a href="mailto:zach.boudreaux999@gmail.com" target="_blank"> zboudreaux99@gmail.com </a>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <Stack className="icon stack" />
                         <a href="https://stackoverflow.com/users/15892002/zacharyrb99" target="_blank"> zacharyrb99 </a>
-                    </div>
+                    </div> */}
 
                     <div>
                         <Resume className="icon resume"/>

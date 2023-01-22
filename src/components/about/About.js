@@ -1,14 +1,15 @@
 import "./About.scss";
 import { useEffect, useState } from "react";
 import SkillList from "../skillList/SkillList";
-import { frontendSkills, backendSkills } from "../../data";
+import { frontendSkills, backendSkills, devopSkills } from "../../data";
 
 const About = () => {
     const [active, setActive] = useState("front");
     const [data, setData] = useState([]);
     const skillList = [
         {id: "front", title: "Front End"},
-        {id: "back", title: "Back End"}
+        {id: "back", title: "Back End"},
+        {id: "devops", title: "DevOps"}
     ];
 
     useEffect(() => {
@@ -18,6 +19,9 @@ const About = () => {
                 break;
             case "back":
                 setData(backendSkills);
+                break;
+            case "devops":
+                setData(devopSkills);
                 break;
             default:
                 setData(frontendSkills);
@@ -31,8 +35,9 @@ const About = () => {
                     <h3> Hello, my name is Zach Boudreaux </h3>
                     <p>
                         I like to build full stack web applications. 
-                        I am a recent <a href="https://www.springboard.com" target="_blank">bootcamp</a> graduate looking for my first opportunity 
-                        in the tech industry. Before jumping into software engineering, I worked in the pharmaceutical industry and also did 
+                        I am a <a href="https://www.springboard.com" target="_blank">bootcamp</a> graduate, and am currently working on my Computer Science degree. 
+                        I have a year of experience with Full Stack Web Development and have 6 months DevOps experience deploying full stack applications. 
+                        Before jumping into software engineering, I worked in the pharmaceutical industry and also did 
                         freelance photography. <a href="#contact">Contact me</a> if you want to connect!
                     </p>
                 </div>
@@ -49,36 +54,14 @@ const About = () => {
                     ))}
                 </ul>
 
-                <div>
+                <div className="skill-icons">
                     {data.map(d => {
-                        switch(d.level){
-                            case "advanced":
-                                return (
-                                    <div className="skills-fill-container">
-                                        <span className="skills-fill skills-fill-advanced">
-                                            <p> {d.title} </p>
-                                        </span>
-                                    </div>
-                                );
-                            case "intermediate":
-                                return (
-                                    <div className="skills-fill-container">
-                                        <span className="skills-fill skills-fill-intermediate">
-                                            <p> {d.title} </p>
-                                        </span>
-                                    </div>
-                                );
-                            case "novice":
-                                return (
-                                    <div className="skills-fill-container">
-                                        <span className="skills-fill skills-fill-novice">
-                                            <p> {d.title} </p>
-                                        </span>
-                                    </div>
-                                );
-                            default:
-                                return null;
+                        if (d.title == "Flask" || d.title == "Express") {
+                            return <i class={d.img_url}></i>
+                        } else {
+                            return <img alt={d.title} width="75px" src={d.img_url} />
                         }
+                        
                     })}
                 </div>
                 </div>

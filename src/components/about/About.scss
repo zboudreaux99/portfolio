@@ -96,46 +96,62 @@
             }
         }
 
-        .skills-fill-container {
-            position: relative;
-            margin-right: 1vw;
-            margin-bottom: 1.5vh;
-            padding: 2vh 5vw;
-            border: 2px solid rgba($mainColor, 0.5);
+        .skill-icons {
+            text-align: center;
 
-            .skills-fill {
-                display: flex;
-                flex-direction: row;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100.25%;
-                margin: -0.25px 0 0 -0.25px;
-                background-color: rgba(125, 125, 125, 1);
-
-                p {
-                    align-self: center;
-                    margin-left: 5px;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    color: rgba($mainColor, 1);
-                }
+            img {
+                display: inline-block;
+                padding: 50px;
             }
 
-            .skills-fill-advanced {
-                width: 55%;
-                // background-color: #399e61;
-            }
-                
-            .skills-fill-intermediate {
-                width: 40%;
-                // background-color: #f8c951;
-            }
-
-            .skills-fill-novice {
-                width: 15%;
-                // background-color: #fa4059;
+            .icon {
+                color: white;
+                font-size: 75px;
+                display: inline-block;
+                padding: 50px;
             }
         }
+
+        // .skills-fill-container {
+        //     position: relative;
+        //     margin-right: 1vw;
+        //     margin-bottom: 1.5vh;
+        //     padding: 2vh 5vw;
+        //     border: 2px solid rgba($mainColor, 0.5);
+
+        //     .skills-fill {
+        //         display: flex;
+        //         flex-direction: row;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         height: 100.25%;
+        //         margin: -0.25px 0 0 -0.25px;
+        //         background-color: rgba(125, 125, 125, 1);
+
+        //         p {
+        //             align-self: center;
+        //             margin-left: 5px;
+        //             font-size: 1.5rem;
+        //             font-weight: bold;
+        //             color: rgba($mainColor, 1);
+        //         }
+        //     }
+
+        //     .skills-fill-advanced {
+        //         width: 55%;
+        //         // background-color: #399e61;
+        //     }
+                
+        //     .skills-fill-intermediate {
+        //         width: 40%;
+        //         // background-color: #f8c951;
+        //     }
+
+        //     .skills-fill-novice {
+        //         width: 15%;
+        //         // background-color: #fa4059;
+        //     }
+        // }
     }
 }
